@@ -24,10 +24,14 @@ func main(){
 	
 	fmt.Printf("It's over %d\n",x)
 	
+	name := "Vivek"
+	
 	// multiple variable declaration
 	name, y := "Naimish", 5
+
 	// %s is used to print name(string) 
 	// %d is used to print x(int)
-	
 	fmt.Printf("%s's age is %d\n",name,y)
+
+	
 }
