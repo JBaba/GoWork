@@ -26,5 +26,7 @@ func main() {
 	}
 
 	naimish.Print()
+	fmt.Println(naimish.Name)
+	fmt.Println(naimish.Person.Name)
 }
 
