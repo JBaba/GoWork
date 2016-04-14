@@ -47,7 +47,7 @@ func main() {
 	fmt.Println(naimish.Name)
 	fmt.Println(naimish.Person.Name)
 
-
+	// Double composition
 	fmt.Println(vivek.Name)
 	fmt.Println(vivek.Person2.Name)
 }
