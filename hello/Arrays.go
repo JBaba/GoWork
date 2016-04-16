@@ -90,6 +90,24 @@ func main() {
 	slice [0] = 999
 	fmt.Println(scores)
 	fmt.Println(slice)
+
+	// array of struct pointer  
+	students_2 := []*student_1{
+	  &student_1{
+	   name: "naimish",
+	   size: 1,
+	  },
+	  &student_1{
+	   name: "vivek",
+	   size: 2,
+	  },
+	  &student_1{
+	   name: "raj",
+	   size: 3,
+	  },
+	}
+
+	extractSize2(students_2)
 }
 
 type student struct{
@@ -97,7 +115,21 @@ type student struct{
 	size int
 }
 
+type student_1 struct{
+	name string
+	size int
+}
+
 func extractSize(students []student) []int{
+	listofsize := make([]int,len(students))
+	for index, aStudrnt := range students {
+		listofsize[index] = aStudrnt.size
+	}
+	return listofsize
+}
+
+// Func which arg is array of struct pointer
+func extractSize2(students []*student_1) []int{
 	listofsize := make([]int,len(students))
 	for index, aStudrnt := range students {
 		listofsize[index] = aStudrnt.size
