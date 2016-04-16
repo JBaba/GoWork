@@ -62,4 +62,35 @@ func main() {
 	score_6 := make([]int,5)
 	score_6 = append(score_6,9332)
 	fmt.Println(score_6)
+
+	// slice of struct array
+	students := []student{
+	  student{
+	   name: "naimish",
+	   size: 1,
+	  },
+	  student{
+	   name: "vivek",
+	   size: 2,
+	  },
+	  student{
+	   name: "raj",
+	   size: 3,
+	  },
+	}
+
+	fmt.Println(extractSize(students))
+}
+
+type student struct{
+	name string
+	size int
+}
+
+func extractSize(students []student) []int{
+	listofsize := make([]int,len(students))
+	for index, aStudrnt := range students {
+		listofsize[index] = aStudrnt.size
+	}
+	return listofsize
 }
