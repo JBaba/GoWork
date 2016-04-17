@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"strings"
+	"math/rand"
+	"sort"
 )
 
 func main() {
@@ -19,6 +21,19 @@ func main() {
 	fmt.Println(score[:len(score)-1])
 
 	removeAtIndex(score,2)
+
+	score_1 := make([]int,20)
+	for i := 0; i < 20; i++ {
+		score_1[i] = int(rand.Intn(1000))
+	}
+	fmt.Println(score_1)
+	sort.Ints(score_1)
+	fmt.Println(score_1)
+
+	score_2 := make([]int,5)
+	// copy array item from one to another
+	copy(score_2,score_1[:5])
+	fmt.Println(score_2)
 }
 
 func removeAtIndex(source []int,index int) []int {
@@ -30,4 +45,5 @@ func removeAtIndex(source []int,index int) []int {
 
 	return source[:lastIndex]
 }
+
 
