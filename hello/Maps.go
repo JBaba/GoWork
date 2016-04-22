@@ -30,4 +30,6 @@ func main() {
 		"goku":1,
 		"b":2,
 	}
+
+	fmt.Println(lookup_2)
 }
