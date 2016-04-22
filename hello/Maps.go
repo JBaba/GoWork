@@ -26,4 +26,8 @@ func main() {
 	fmt.Println("total size of map:",total)
 	fmt.Println(lookup)
 
+	lookup_2 := map[string]int{
+		"goku":1,
+		"b":2,
+	}
 }
