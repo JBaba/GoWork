@@ -12,8 +12,8 @@ func main(){
 	var txt string
 	
 	fmt.Printf("Default value for int %d\n",power)
-	fmt.Printf("Default value for booleans %d\n",flag)
-	fmt.Printf("Default value for string %d\n",txt)
+	fmt.Printf("Default value for booleans %t\n",flag)
+	fmt.Printf("Default value for string %s\n",txt)
 	
 	power = 9
 	
